@@ -26,7 +26,7 @@ namespace MovieRater.Data
                 //add all ratings
                 foreach (var rating in Ratings)
                 {
-                    totalAverageRating += rating.AverageRating;
+                    totalAverageRating += rating.StarRating;
                 }
                 // get average from total
 
