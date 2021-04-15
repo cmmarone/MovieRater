@@ -15,8 +15,8 @@ namespace MovieRater.Data
         public string Title { get; set; }
         public int Seasons { get; set; }
         public int Episode { get; set; }
-        [Required]
-        public Guid OwnerId { get; set; }
+      //  [Required]
+      //  public Guid OwnerId { get; set; }
         public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
 
         public double Rating

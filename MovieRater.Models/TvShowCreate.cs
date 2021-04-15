@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieRater.Models
 {
-    class TvShowCreate
+   public class TvShowCreate
     {
         [Required]
         public string Title { get; set; }
