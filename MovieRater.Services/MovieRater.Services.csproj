@@ -57,10 +57,15 @@
     <Compile Include="MovieService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="RatingServices.cs" />
 =======
     <Compile Include="TvShowServices.cs" />
 >>>>>>> e4d657149e0732145b8edaf5bea183aab1f54a6c
+=======
+    <Compile Include="RatingServices.cs" />
+    <Compile Include="TvShowServices.cs" />
+>>>>>>> 78a5cb871a5e25d15515f577cab644e1a347171c
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
