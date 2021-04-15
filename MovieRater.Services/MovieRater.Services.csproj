@@ -54,8 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MovieService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RatingServices.cs" />
+    <Compile Include="TvShowServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

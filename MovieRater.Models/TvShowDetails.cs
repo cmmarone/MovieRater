@@ -1,22 +1,20 @@
-﻿using System;
+﻿using MovieRater.Data;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieRater.Data
+namespace MovieRater.Models
 {
-    public class TVShow
+    public class TvShowDetails
     {
-        [Key]
+
         public int TvShowId { get; set; }
-        [Required]
+      
         public string Title { get; set; }
         public int Seasons { get; set; }
         public int Episode { get; set; }
-      //  [Required]
-      //  public Guid OwnerId { get; set; }
         public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
 
         public double Rating
