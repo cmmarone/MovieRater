@@ -54,11 +54,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MovieCreate.cs" />
+    <Compile Include="MovieDetails.cs" />
+    <Compile Include="MovieEdit.cs" />
+    <Compile Include="MovieListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+
     <Compile Include="TvShowCreate.cs" />
     <Compile Include="TvShowDetails.cs" />
     <Compile Include="TvShowEdit.cs" />
     <Compile Include="TvShowListItem.cs" />
+
+    <Compile Include="RatingCreate.cs" />
+    <Compile Include="RatingEdit.cs" />
+    <Compile Include="RatingListItem.cs" />
+
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -66,7 +76,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MovieRater.Data\MovieRater.Data.csproj">
+
       <Project>{E3E4A431-5253-422E-8AD5-E36BF9C62058}</Project>
+
+      <Project>{e3e4a431-5253-422e-8ad5-e36bf9c62058}</Project>
+
       <Name>MovieRater.Data</Name>
     </ProjectReference>
   </ItemGroup>
