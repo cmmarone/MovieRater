@@ -16,7 +16,7 @@ namespace MovieRater.Data
         public string Title { get; set; }
 
         public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
-
+        public Guid OwnerId { get; set; }
         public double Rating
         {
             get
