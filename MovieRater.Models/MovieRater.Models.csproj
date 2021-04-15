@@ -55,10 +55,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TvShowCreate.cs" />
+    <Compile Include="TvShowDetails.cs" />
+    <Compile Include="TvShowEdit.cs" />
+    <Compile Include="TvShowListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieRater.Data\MovieRater.Data.csproj">
+      <Project>{E3E4A431-5253-422E-8AD5-E36BF9C62058}</Project>
+      <Name>MovieRater.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
