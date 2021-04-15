@@ -17,8 +17,8 @@ namespace MovieRater.WebAPI.Controllers
 
         private MovieService CreateMovieService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var Service = new MovieService(userId);
+           // var userId = Guid.Parse(User.Identity.GetUserId());
+            var Service = new MovieService();
             return Service;
         }
 
@@ -42,6 +42,50 @@ namespace MovieRater.WebAPI.Controllers
             }
             return Ok("Movie Created");
             
+        }
+
+        public IHttpActionResult Get()
+        {
+            MovieService movieService = CreateMovieService();
+            var movies = movieService.GetMovies();
+            return Ok(movies);
+        }
+        public IHttpActionResult Get(int id)
+        {
+            MovieService noteService = CreateMovieService();
+            var note = noteService.GetMovieById(id);
+            return Ok(note);
+        }
+
+        
+        //private MovieService CreateMovieService()
+        //{
+        //    var userId = Guid.Parse(User.Identity.GetUserId());
+        //    var noteService = new NoteServices(userId);
+        //    return noteService;
+        //}
+
+        public IHttpActionResult Put(MovieEdit movie)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateMovieService();
+
+            if (!service.UpdateMovie(movie))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateMovieService();
+
+            if (!service.DeleteMovie(id))
+                return InternalServerError();
+
+            return Ok();
         }
 
     }

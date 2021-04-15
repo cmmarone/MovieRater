@@ -13,7 +13,7 @@ namespace MovieRater.Models
         
         [Required]
         public string Title { get; set; }
-        public Guid OwnerId { get; set; }
+        //public Guid OwnerId { get; set; }
 
 
     }
