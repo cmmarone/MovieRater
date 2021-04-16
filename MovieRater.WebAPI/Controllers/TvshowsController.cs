@@ -57,6 +57,32 @@ namespace MovieRater.WebAPI.Controllers
             var tvshow = tvShowServices.GetTvShowByTitle(title);
             return Ok(tvshow);
         }
+
+        [HttpPut]
+        public IHttpActionResult Put(TvShowEdit tvShow)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateTvShowServices();
+
+            if (!service.UpdateTvShow(tvShow))
+                return InternalServerError();
+
+            return Ok();
+
+        }
+
+        [HttpDelete]
+        public IHttpActionResult Delete(int tvShowId)
+        {
+            var service = CreateTvShowServices();
+
+            if (!service.DeleteTvShow(tvShowId))
+                return InternalServerError();
+
+            return Ok();
+        }
     }
 
 }
